@@ -149,6 +149,8 @@ pub struct DebianSettings {
   /// List of custom files to add to the deb package.
   /// Maps the path on the debian package to the path of the file to include (relative to the current working directory).
   pub files: HashMap<PathBuf, PathBuf>,
+  /// List of supported mime types
+  pub mime_types: Option<Vec<String>>
 }
 
 /// The macOS bundle settings.

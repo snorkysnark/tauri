@@ -1107,6 +1107,16 @@
           "additionalProperties": {
             "type": "string"
           }
+        },
+        "mimeTypes": {
+          "description": "List of supported mime types",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
         }
       },
       "additionalProperties": false

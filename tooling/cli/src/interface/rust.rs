@@ -789,6 +789,7 @@ fn tauri_config_to_bundle_settings(
         Some(depends)
       },
       files: config.deb.files,
+      mime_types: config.deb.mime_types
     },
     macos: MacOsSettings {
       frameworks: config.macos.frameworks,

@@ -262,6 +262,8 @@ pub struct DebConfig {
   /// The files to include on the package.
   #[serde(default)]
   pub files: HashMap<PathBuf, PathBuf>,
+  /// List of supported mime types
+  pub mime_types: Option<Vec<String>>
 }
 
 fn de_minimum_system_version<'de, D>(deserializer: D) -> Result<Option<String>, D::Error>

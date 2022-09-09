@@ -158,6 +158,9 @@ fn generate_desktop_file(settings: &Settings, data_dir: &Path) -> crate::Result<
   writeln!(file, "Name={}", settings.product_name())?;
   writeln!(file, "Terminal=false")?;
   writeln!(file, "Type=Application")?;
+  if let Some(mime_types) = &settings.deb().mime_types {
+    writeln!(file, "MimeType={}", mime_types.join(";"))?;
+  }
   Ok(())
 }
 
